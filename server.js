@@ -10,7 +10,7 @@ require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
-app.use( express.static("images"))
+app.use( express.static("upload"))
 const connectDB = async () => {
 
     try {
@@ -62,7 +62,7 @@ const mainMail =(name, email, subject, message) =>  {
 app.listen(port, () => {
     const storage = multer.diskStorage({
         destination: function(req , file,cb) {
-            cb(null , "images")
+            cb(null , "upload")
         },
         filename : function(req , file ,cb){
             cb(null,Date.now() + path.extname(file.originalname));
