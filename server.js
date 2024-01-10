@@ -40,7 +40,7 @@ const mainMail =(name, email, subject, message) =>  {
       
       auth: {
         user: "info@bonyankala.com",
-        pass: "BonInfo **7452!*",
+        pass: "bonyan@110",
       },
     });
     const mailOption = {
