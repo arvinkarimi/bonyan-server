@@ -11,6 +11,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use( express.static("upload"))
+app.use( express.static("pdf"))
 const connectDB = async () => {
 
     try {
